@@ -21,6 +21,19 @@ Or
 ./build.sh
 ```
 
+#### From docker hub
+
+```
+docker pull alexlun/bitcoin-regtest
+docker tag alexlun/bitcoin-regtest regtest-image
+```
+
+Or
+
+```
+./install.sh
+```
+
 ### Running the container
 
 ```
