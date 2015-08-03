@@ -64,9 +64,10 @@ clients][docker-clients] availiable whithin your test suites.
 
 ### Connecting to the container
 
-The address to connect to is `$DOCKER_HOST:18332`.
+The address to connect to is `$DOCKER_HOST:18332`.  
 Credentials - login `rpcuser` password `rpcpassword`.
 If you want to experiment with cli it's absolutely possible:
+
 ```
 docker exec -it regtest bitcoin-cli -regtest generate 101
 ```
