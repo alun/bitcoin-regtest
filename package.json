@@ -1,0 +1,27 @@
+{
+  "name": "bitcoin-regtest",
+  "version": "1.0.0",
+  "description": "Bitcoin regtest images generator",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alun/bitcoin-regtest.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "docker",
+    "image"
+  ],
+  "author": "Aleksei Lunacharskii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alun/bitcoin-regtest/issues"
+  },
+  "homepage": "https://github.com/alun/bitcoin-regtest#readme",
+  "dependencies": {
+    "co": "^4.6.0"
+  }
+}

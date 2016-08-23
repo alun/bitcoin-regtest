@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -ex
+
+bitcoind
+
+sleep 3
+
+${userServers}
+
+while true ; do
+    sleep 1
+done

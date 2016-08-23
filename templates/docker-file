@@ -1,0 +1,21 @@
+FROM ubuntu:14.04
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8842ce5e && \
+    echo "deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu trusty main" > /etc/apt/sources.list.d/bitcoin.list
+
+RUN apt-get update && \
+    apt-get install -y bitcoind && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ENV HOME /bitcoin
+WORKDIR /bitcoin
+RUN mkdir ${names}
+
+VOLUME ["/bitcoin"]
+
+COPY run_servers /usr/local/bin/run_servers
+COPY bitcoin /bitcoin/.bitcoin
+
+EXPOSE 18444 ${ports}
+
+CMD ["run_servers"]
