@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -ex
+
+bitcoind
+
+sleep 3
+
+bitcoind -conf=user0
+bitcoind -conf=user1
+bitcoind -conf=user2
+bitcoind -conf=user3
+bitcoind -conf=user4
+bitcoind -conf=user5
+bitcoind -conf=user6
+bitcoind -conf=user7
+bitcoind -conf=user8
+bitcoind -conf=user9
+
+while true ; do
+    sleep 1
+done

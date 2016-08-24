@@ -9,14 +9,14 @@ RUN apt-get update && \
 
 ENV HOME /bitcoin
 WORKDIR /bitcoin
-RUN mkdir ${names}
+RUN mkdir user0 user1 user2 user3 user4 user5 user6 user7 user8 user9
 
 VOLUME ["/bitcoin"]
 
 COPY run_servers /usr/local/bin/run_servers
 COPY bitcoin /bitcoin/.bitcoin
-COPY ${confFile} /bitcoin/${confFile}
+COPY users.json /bitcoin/users.json
 
-EXPOSE 18444 ${ports}
+EXPOSE 18444 2000 2001 2002 2003 2004 2005 2006 2007 2008 2009
 
 CMD ["run_servers"]
