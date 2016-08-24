@@ -9,11 +9,10 @@ connect=127.0.0.1:18444
 daemon=1
 
 server=1
-rpcbind=127.0.0.1
+rpcbind=0.0.0.0
 rpcport=2002
 rpcuser=rpcuser
 rpcpassword=rpcpassword
-rpcallowip=0.0.0.0
 rpcallowip=::/0
 
 datadir=/bitcoin/user2
