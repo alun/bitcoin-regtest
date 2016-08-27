@@ -10,7 +10,7 @@ your bitcoin application.
 This image provides a way of building a docker image for your needs. It creates several bitcoind instances
 running in regtest mode and connects each other into a single network.
 
-Each daemon provides their own JSON-RPC port in order user different wallets.
+Each daemon provides their own JSON-RPC port in order to support mimic of several wallets/users.
 
 ## Using the image
 
@@ -18,6 +18,10 @@ Each daemon provides their own JSON-RPC port in order user different wallets.
 
 ```
 npm install
+```
+
+This step is optional - generated `users.json` is already included with the source files.
+```
 node generate config [number] [startPort]
 ```
 this will create `users.json` file which is used for further configuration.
@@ -36,22 +40,10 @@ bitcoin commands on a user behalf. And `bitcoin` config dir for using by `bitcoi
 ### Build and install image to your docker environment
 
 ```
-docker build -t regtest-image
-```
-
-Or
-
-```
 s/build
 ```
 
 ### Running the container
-
-```
-docker run -Pd --name regtest regtest-image
-```
-
-Or
 
 ```
 s/run
@@ -59,12 +51,6 @@ s/run
 
 Since this all is about testing, it would be good to clean up to refresh
 environment for subsequent tests:
-
-```
-docker stop regtest && docker rm regtest
-```
-
-Or
 
 ```
 s/stop
