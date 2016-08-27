@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/alun/bitcoin-regtest#readme",
   "dependencies": {
-    "co": "^4.6.0"
+    "co": "^4.6.0",
+    "promise-fs": "git@github.com:alun/promise-fs"
   }
 }
