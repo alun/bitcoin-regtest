@@ -1,6 +1,8 @@
 disablewallet=0
 printtoconsole=1
 
+txindex=1
+
 regtest=1
 
 listen=0
